@@ -1,0 +1,147 @@
+.container {
+  /* border: 2px solid red; */
+  width: 80rem;
+  height: 40rem;
+  display: flex;
+  margin: auto;
+  color: white;
+}
+
+.imagewrapper {
+  /* border: 2px solid blue; */
+  width: 50%;
+  height: 100%;
+}
+
+.content {
+  /* border: 2px solid green; */
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
+  padding: 2rem;
+}
+
+/* headers */
+.headers {
+  /* border: 1px solid red; */
+  font-size: 2rem;
+  text-align: center;
+  margin-inline-start: -22rem;
+  font-weight: bolder;
+}
+.special {
+  display: inline-block;
+  background: linear-gradient(
+    to right,
+    rgba(149, 169, 168, 1),
+    rgba(149, 169, 168, 0.7)
+  ); /* Gradient colors */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transpare;
+}
+/* firefox */
+.special {
+  background: linear-gradient(
+    to right,
+    rgba(149, 169, 168, 1),
+    rgba(149, 169, 168, 0.7)
+  ); /* Gradient colors */
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.descriptionwraap {
+  /* border: 2px solid red; */
+  padding-block: 1rem;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-y: auto;
+}
+
+.description {
+  font-size: 1.3rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif, monospace;
+  padding-inline-end: 3.7rem;
+}
+
+button {
+  width: 50%;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  background-color: #95a9a8;
+  border: none;
+  color: white;
+  transition: all 0.3s;
+}
+button:hover {
+  background-color: transparent;
+  color: #95a9a8;
+  outline: 2px solid #95a9a8;
+  box-shadow: 0 0 5px #95a9a8, /* Outer glow */ 0 0 10px #95a9a8,
+    /* Outer glow */ 0 0 15px #95a9a8; /* Outer glow */
+}
+/* MEDIA QUERIES */
+
+@media (max-width: 1286px) {
+  .container {
+    width: 100%;
+    flex-direction: column;
+    align-content: center;
+  }
+  .imagewrapper {
+    width: 100%;
+  }
+  .content {
+    width: 100%;
+  }
+  .headers {
+    margin-inline: auto;
+  }
+  .description {
+    padding-inline-end: 0;
+    text-align: center;
+  }
+  a {
+    margin: auto;
+  }
+  button {
+    width: 20rem;
+    margin: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .headers {
+    font-size: 1.5rem;
+  }
+  .description {
+    text-align: center;
+  }
+  button {
+    width: 10rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 706px) {
+  .headers {
+    font-size: 1rem;
+  }
+
+  .content {
+    gap: 1.3rem;
+    padding-bottom: 1rem;
+  }
+  .descriptionwraap {
+    height: 70%;
+  }
+}
